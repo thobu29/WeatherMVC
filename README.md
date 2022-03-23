@@ -10,3 +10,10 @@ Database used: Sqlite
 Entity Framework Core 6.0.3
 
 Uses OpenWeatherMap API
+
+You have to run
+
+npm i --save-dev @types/jquery
+
+inside the project folder before compiling the solution.
+
