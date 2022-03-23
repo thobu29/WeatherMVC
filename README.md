@@ -17,3 +17,8 @@ npm i --save-dev @types/jquery
 
 inside the project folder before compiling the solution.
 
+please set both projects (WeatherAPI and WeatherMVC) as startup projects
+
+Kind regards
+Thomas Buck
+
