@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="apiSelector" id="chkOpenWeather" checked>
+  <label class="form-check-label" for="chkOpenWeather">
+    OpenWeather
+  </label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="apiSelector" id="chkOwnAPI">
+  <label class="form-check-label" for="ownAPI">
+    eigene API
+  </label>
+</div>
+
+
+<div>
+    <h1>Aktuelle Wetterinformationen</h1>
+    <p id="remark"><small>Es sind Informationen für folgende Städte vorhanden: Erfurt, Berlin, Bremen, Leipzig, Hamburg, Rostock, Hannover, Magdeburg, Dresden, Stuttgart</small></p>
+    <form id="weatherForm">
+        <h3>Stadtnamen eingeben</h3>
+        <div id="input" class="input-group">
+            <input id="city" type="text" class="form-control" placeholder="Stadt eingeben" />
+            <button type="submit" class="btn btn-primary">Stadt suchen</button>
+        </div>
+    </form>
+    <div id="resultDiv" style="display:none;">
+        <h3 id="resultHeader"></h3>
+        <table id="weatherTable" class="table table-borderless table-secondary table-sm">
+            <tr>
+                <th>Temperatur:</th>
+                <td id="temperature"></td>
+                <td rowspan="8" style="vertical-align: top;"></td>
+                <td rowspan="8" style="vertical-align: top;"><img id="icon" /><span id="weather"</span></td>
+            </tr>
+            <tr>
+                <th>Luftdruck:</th>
+                <td id="pressure"></td>
+            </tr>
+            <tr>
+                <th>Feuchtigkeit:</th>
+                <td id="humidity"></td>
+            </tr>
+            <tr>
+                <th>geringste Temperatur:</th>
+                <td id="temp_min"></td>
+            </tr>
+            <tr>
+                <th>höchste Temperatur:</th>
+                <td id="temp_max"></td>
+            </tr>
+            <tr>
+                <th>Windgeschwindigkeit:</th>
+                <td id="wind_speed"></td>
+            </tr>
+            <tr>
+                <th>Windrichtung:</th>
+                <td id="wind_direction"></td>
+            </tr>
+            <tr>
+                <th>Bewölkung</th>
+                <td id="clouds"></td>
+            </tr>
+        </table>
+        <p><small id="dateTime"></small></p>
+    </div>
+    <div id="errorDiv" class="error" style="display:none;" />
+</div>
+
